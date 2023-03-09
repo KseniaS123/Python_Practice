@@ -14,12 +14,15 @@ line = input().split()
 vowels = ['а', 'я', 'у', 'ю', 'о', 'е', 'ё', 'э', 'и', 'ы']
 res = list()
 for item in line:
-    sum = 0
+    count = 0
     for letter in item:
         if letter.lower() in vowels:
-            sum += 1
-    res.append(sum)
-if len(set(res)) == 1:
-    print("Парам пам-пам")
+            count += 1
+    res.append(count)
+if sum(res) != 0:
+    if len(set(res)) == 1:
+        print("Парам пам-пам")
+    else:
+        print("Пам парам")
 else:
     print("Пам парам")
